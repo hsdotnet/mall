@@ -244,7 +244,6 @@ Page({
     wx.navigateTo({
       url: '../productList/productList?searchKey=' + key
     })
-
   },
   search: function(e) {
     let key = e.currentTarget.dataset.key || "";

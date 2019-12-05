@@ -2,7 +2,7 @@
   <view class="tui-searchbox">
     <view class="tui-search-input">
       <icon type="search" size='13' color='#333'></icon>
-      <input confirm-type="search" placeholder="大家都在搜：2019退役球星" auto-focus="{{true}}" placeholder-class="tui-input-plholder" class="tui-input" value="{{key}}" bindinput="input"/>
+      <input confirm-type="search" placeholder="{{placeholder}}" auto-focus="{{true}}" placeholder-class="tui-input-plholder" class="tui-input" value="{{key}}" bindconfirm="confirm"/>
        <icon type="clear" size='13' color='#bcbcbc' bindtap="cleanKey" hidden="{{!key}}"></icon>
     </view>
     <view class="tui-cancle" bindtap="back">取消</view>
@@ -15,7 +15,7 @@
     </view>
     <view class="tui-history-content">
       <block wx:for="{{history}}" wx:key="{{index}}">
-        <tui-tag type="gray" tui-tag-class="tui-tag" shape="circle">{{item}}</tui-tag>
+        <tui-tag type="gray" tui-tag-class="tui-tag" shape="circle" data-key="{{item}}" bindtap="search">{{item}}</tui-tag>
       </block>
     </view>
   </view>
@@ -26,7 +26,7 @@
     </view>
     <view class="tui-hot-content">
       <block wx:for="{{hot}}" wx:key="{{index}}">
-        <tui-tag type="gray" tui-tag-class="tui-tag" shape="circle">{{item}}</tui-tag>
+        <tui-tag type="gray" tui-tag-class="tui-tag" shape="circle" data-key="{{item}}" bindtap="search">{{item}}</tui-tag>
       </block>
     </view>
   </view>

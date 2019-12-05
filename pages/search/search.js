@@ -28,21 +28,29 @@ Page({
       "女神大会"
     ],
     key: "",
+    placeholder: "",
     showActionSheet: false,
     tips: "确认清空搜索历史吗？"
   },
   onLoad: function(options) {
     this.setData({
-      key: options.searchKey || ""
+      placeholder: options.searchKey || ""
     })
   },
   back: function() {
     wx.navigateBack();
   },
-  input: function(e) {
+  confirm: function(e) {
     let key = util.trim(e.detail.value);
-    this.setData({
-      key: key
+      if(key){
+      this.setData({
+        key: key
+      })
+    }else{
+      key = this.data.placeholder
+    }
+    wx.navigateTo({
+      url: '../productList/productList?searchKey=' + key
     })
   },
   cleanKey: function() {
@@ -68,5 +76,14 @@ Page({
         history: []
       })
     }
+  },
+  search: function(e) {
+    let key = e.currentTarget.dataset.key || "";
+    this.setData({
+      key: key
+    })
+    wx.navigateTo({
+      url: '../productList/productList?searchKey=' + key
+    })
   }
 })
