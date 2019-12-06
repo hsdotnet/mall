@@ -7,6 +7,7 @@ Page({
       id: 2,
       buyNum: 1
     }],
+    cartProductList: [],
     actions: [{
         name: '收藏',
         width: 64,
@@ -147,7 +148,7 @@ Page({
   },
   detail: function() {
     wx.navigateTo({
-      url: '../../productDetail/productDetail'
+      url: '../productDetail/productDetail'
     })
   },
   btnPay() {
@@ -155,43 +156,9 @@ Page({
       url: '../submitOrder/submitOrder'
     })
   },
-  onPullDownRefresh() {
-    setTimeout(() => {
-      wx.stopPullDownRefresh()
-    }, 200)
-  },
-  onPullDownRefresh: function() {
-    let loadData = JSON.parse(JSON.stringify(this.data.productList));
-    loadData = loadData.splice(0, 10)
-    this.setData({
-      productList: loadData,
-      pageIndex:1,
-      pullUpOn: true,
-      loadding: false
+  toIndexPage: function() {
+    wx.switchTab({
+      url: '../index/index'
     })
-    wx.stopPullDownRefresh()
-  },
-  onReachBottom: function() {
-    if (!this.data.pullUpOn) return;
-    this.setData({
-      loadding:true
-    })
-    if (this.data.pageIndex == 4) {
-      this.setData({
-        loadding:false,
-        pullUpOn:false
-      })
-    } else {
-      let loadData = JSON.parse(JSON.stringify(this.data.productList));
-      loadData = loadData.splice(0, 10)
-      if (this.data.pageIndex == 1) {
-        loadData = loadData.reverse();
-      }
-      this.setData({
-        pageIndex: this.data.pageIndex + 1,
-        loadding: false,
-        productList: this.data.productList.concat(loadData)
-      })
-    }
   }
 })
