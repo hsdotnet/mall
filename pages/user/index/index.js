@@ -37,6 +37,12 @@ Page({
       case 4:
         url = "../myOrder/myOrder"
         break;
+      case 10:
+        url = "../myCoupon/myCoupon"
+        break;
+      case 11:
+          url = "../../coupon/coupon"
+        break;
       default:
         break;
     }

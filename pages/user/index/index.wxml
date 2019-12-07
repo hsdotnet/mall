@@ -85,14 +85,14 @@
       </view>
     </view>
 
-    <view class="tui-box tui-assets-box" bindtap="href" data-type="6">
+    <view class="tui-box tui-assets-box">
       <tui-list-cell padding="0" last="{{true}}" hover="{{false}}">
         <view class="tui-cell-header">
           <view class="tui-cell-title">我的资产</view>
         </view>
       </tui-list-cell>
       <view class="tui-order-list tui-assets-list">
-        <view class="tui-order-item">
+        <view class="tui-order-item" bindtap="href" data-type="10">
           <view class="tui-assets-num">
             <text>3</text>
             <view class="tui-badge-dot"></view>
@@ -127,7 +127,7 @@
       </view>
     </view>
 
-    <view class="tui-box tui-tool-box" bindtap="href" data-type="7">
+    <view class="tui-box tui-tool-box">
       <tui-list-cell arrow="{{true}}" padding="0" lineLeft="{{false}}">
         <view class="tui-cell-header">
           <view class="tui-cell-title">常用工具</view>
@@ -148,7 +148,7 @@
           </view>
           <view class="tui-tool-text">钱包</view>
         </view>
-        <view class=" tui-tool-item">
+        <view class=" tui-tool-item" bindtap="href" data-type="11">
           <view class="tui-icon-box">
             <image src="/static/images/mall/my/icon_ticket_3x.png" class="tui-tool-icon"></image>
           </view>

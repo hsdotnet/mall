@@ -4,12 +4,12 @@
     <view class="title-cart">购物车还是空的</view>
     <view class="title-buy">赶紧买点宝贝慰劳下自己吧</view>
     <view class="tobuy">
-      <tui-button width="150rpx" height="60rpx" size="{{25}}" plain="true" type="danger" shape="circle" bind:click="toIndexPage">
+      <tui-button width="150rpx" height="60rpx" size="{{25}}" plain="true" type="danger" bind:click="toIndexPage">
         去逛逛
       </tui-button>
     </view>
   </view>
-  <view wx:if="{{cartProductList.length > 0}}">
+  <view wx:else>
     <view class="tui-edit-goods">
       <view>
         购物车共

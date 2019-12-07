@@ -13,7 +13,8 @@
     "pages/user/address/address",
     "pages/user/editAddress/editAddress",
     "pages/user/myOrder/myOrder",
-    "pages/user/orderDetail/orderDetail"
+    "pages/user/orderDetail/orderDetail",
+    "pages/user/myCoupon/myCoupon"
   ],
   "window": {
     "backgroundTextStyle": "dark",

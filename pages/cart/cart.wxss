@@ -330,9 +330,9 @@
 .no-cart image{
     margin: 0 auto;
     display: block;
-    width: 248rpx;
-	height: 248rpx;
-	margin-top: 80rpx;
+    width: 160rpx;
+	height: 160rpx;
+	margin-top: 30rpx;
 }
 
 .no-cart .title-cart{
