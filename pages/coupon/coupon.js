@@ -1,5 +1,6 @@
 Page({
   data: {
+    couponList:[{},{},{},{},{}],
     loadding: false,
     pullUpOn: true
   },
