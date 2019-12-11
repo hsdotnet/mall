@@ -330,24 +330,24 @@
 .no-cart image{
     margin: 0 auto;
     display: block;
-    width: 160rpx;
-	height: 160rpx;
-	margin-top: 30rpx;
+    width: 328rpx;
+	height: 248rpx;
+	margin-top: 80rpx;
 }
 
 .no-cart .title-cart{
-	margin-top: 20rpx;
+	margin-top: 30rpx;
 	font-size:28rpx;
 	color: #333;
 }
 
 .no-cart .title-buy{
 	font-size:24rpx;
-	margin-top: 10rpx;
-	color:#666;
+	margin-top: 20rpx;
+	color:#999;
 }
 
 .no-cart .tobuy{
-	margin-top: 20rpx;
-	margin-bottom: 30rpx;
+	margin-top: 30rpx;
+	margin-bottom: 50rpx;
 }

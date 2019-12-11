@@ -1,6 +1,6 @@
 <view class="container">
   <view class="no-cart" wx:if="{{cartProductList.length <= 0}}">
-    <image src="/static/images/mall/no_cart.png" />
+    <image src="/static/images/none/cart_empty.png" />
     <view class="title-cart">购物车还是空的</view>
     <view class="title-buy">赶紧买点宝贝慰劳下自己吧</view>
     <view class="tobuy">
