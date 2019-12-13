@@ -5,8 +5,6 @@
   "usingComponents": {
     "tui-button": "../../../components/extend/button/button",
     "tui-list-cell": "../../../components/list-cell/list-cell",
-    "tui-icon": "../../../components/icon/icon",
-    "tui-divider": "../../../components/divider/divider",
-    "tui-loadmore": "../../../components/loadmore/loadmore"
+    "tui-icon": "../../../components/icon/icon"
   }
 }

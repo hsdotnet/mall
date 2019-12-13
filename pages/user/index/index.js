@@ -43,6 +43,9 @@ Page({
       case 11:
           url = "../../coupon/coupon"
         break;
+        case 50:
+          url = "../collection/collection"
+        break;
       default:
         break;
     }
